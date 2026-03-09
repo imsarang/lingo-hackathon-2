@@ -1,0 +1,10 @@
+{
+  "defaultLocale": "en",
+  "locales": ["en", "hi", "mr"],
+  "labels": {
+    "en": "English",
+    "hi": "Hindi",
+    "mr": "Marathi"
+  },
+  "description": "Basic i18n config for the frontend. Use these locale codes when calling Lingo.dev or rendering language selectors."
+}

@@ -1,0 +1,46 @@
+name: Lingo.dev Translate
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Run Lingo.dev CI
+        working-directory: frontend
+        env:
+          LINGO_API_KEY: ${{ secrets.LINGODOTDEV_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "Running Lingo.dev translation..."
+          # Remove empty locale directories if they exist (they can confuse Lingo.dev)
+          rm -rf locales/*/
+          # Run Lingo.dev CI - it will update existing translations when en.json changes
+          npx lingo.dev@latest ci --no-interactive
+      
+      - name: Commit and push translations
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add frontend/locales
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(i18n): auto-translate updated strings [skip ci]"
+            git push
+          else
+            echo "No translation updates needed"
+          fi

@@ -1,0 +1,21 @@
+{
+  "app.title": "Lingo Policy Explorer",
+  "app.subtitle": "Simple dashboard to embed PDFs, compare state policies, explore city data, and run RAG queries.",
+
+  "section.embed.title": "Embed PDFs",
+  "section.embed.description": "Upload policy PDFs and send them to the embedding pipeline.",
+  "section.embed.button": "Send to embedding pipeline",
+
+  "section.policy.title": "Compare state policies",
+  "section.policy.description": "Select two states and describe what you want to compare.",
+  "section.policy.button": "Compare",
+
+  "section.geo.title": "City / point data",
+  "section.geo.description": "Look up information for a specific state and city.",
+  "section.geo.button": "Get data",
+
+  "section.rag.title": "RAG Q&A (streamed)",
+  "section.rag.description": "Ask a question and stream an answer from the RAG system.",
+  "section.rag.button": "Ask"
+}
+
