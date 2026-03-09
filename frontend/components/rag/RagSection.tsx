@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { t } from "../../lib/i18n";
+import { useI18n } from "../i18n/I18nProvider";
 
 export default function RagSection() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState<string | null>(null);
   const [isStreaming, setIsStreaming] = useState(false);
+  const { t } = useI18n();
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();

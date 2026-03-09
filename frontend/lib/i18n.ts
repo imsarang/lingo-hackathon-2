@@ -1,11 +1,21 @@
 import en from "../locales/en.json";
+import hi from "../locales/hi.json";
+import mr from "../locales/mr.json";
 
-type Messages = typeof en;
+export type Messages = typeof en;
 
-// Very small, static i18n helper.
-// For now we only use `en` at runtime; CI will keep other locale files in sync.
+export const messagesByLocale = {
+  en,
+  hi,
+  mr,
+} as const;
 
-export function t<Key extends keyof Messages>(key: Key): Messages[Key] {
-  return en[key];
+export type Locale = keyof typeof messagesByLocale;
+
+export const DEFAULT_LOCALE: Locale = "en";
+export const SUPPORTED_LOCALES: Locale[] = ["en", "hi", "mr"];
+
+export function getMessages(locale: Locale): Messages {
+  return messagesByLocale[locale] ?? en;
 }
 

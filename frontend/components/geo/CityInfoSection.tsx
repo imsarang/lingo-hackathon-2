@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { t } from "../../lib/i18n";
+import { useI18n } from "../i18n/I18nProvider";
 
 const STATES = ["Maharashtra", "Karnataka", "Gujarat", "Delhi"] as const;
 const CITIES_BY_STATE: Record<string, string[]> = {
@@ -15,6 +15,7 @@ export default function CityInfoSection() {
   const [state, setState] = useState<(typeof STATES)[number] | "">("");
   const [city, setCity] = useState<string>("");
   const [info, setInfo] = useState<string | null>(null);
+  const { t } = useI18n();
 
   function handleStateChange(value: string) {
     setState(value as (typeof STATES)[number]);

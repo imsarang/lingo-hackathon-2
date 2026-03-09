@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { t } from "../../lib/i18n";
+import { useI18n } from "../i18n/I18nProvider";
 
 const STATES = ["Maharashtra", "Karnataka", "Gujarat", "Delhi"] as const;
 
@@ -10,6 +10,7 @@ export default function PolicyCompareSection() {
   const [stateB, setStateB] = useState<(typeof STATES)[number] | "">("");
   const [question, setQuestion] = useState("");
   const [result, setResult] = useState<string | null>(null);
+  const { t } = useI18n();
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();

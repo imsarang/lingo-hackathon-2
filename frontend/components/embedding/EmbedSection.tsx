@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { t } from "../../lib/i18n";
+import { useI18n } from "../i18n/I18nProvider";
 
 export default function EmbedSection() {
   const [file, setFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t } = useI18n();
 
   function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
     const selected = event.target.files?.[0] ?? null;
