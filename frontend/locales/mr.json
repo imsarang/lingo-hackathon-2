@@ -1,0 +1,16 @@
+{
+  "app.title": "लिंगो पॉलिसी एक्सप्लोरर",
+  "app.subtitle": "पीडीएफ एम्बेड करा, राज्य धोरणांची तुलना करा, शहराचा डेटा पाहा, आणि RAG क्वेरी चालवा यासाठी सोपी डॅशबोर्ड.",
+  "section.embed.title": "पीडीएफ समाविष्ट करा",
+  "section.embed.description": "धोरणाचे पीडीएफ अपलोड करा आणि त्यांना एम्बेडिंग पाइपलाइनमध्ये पाठवा.",
+  "section.embed.button": "एम्बेडिंग पाइपलाइनला पाठवा",
+  "section.policy.title": "राज्य धोरणांची तुलना करा",
+  "section.policy.description": "दोन राज्ये निवडा आणि तुम्हाला कोणती तुलना करायची आहे ते सांगा.",
+  "section.policy.button": "तुलना करा",
+  "section.geo.title": "शहर / बिंदू डेटा",
+  "section.geo.description": "विशिष्ट राज्य आणि शहरासाठी माहिती शोधा.",
+  "section.geo.button": "डेटा मिळवा",
+  "section.rag.title": "RAG प्रश्नोत्तर (थेट प्रवाह)",
+  "section.rag.description": "प्रश्न विचारा आणि RAG प्रणालीकडून उत्तर प्रवाहित करा.",
+  "section.rag.button": "प्रश्न विचारा"
+}

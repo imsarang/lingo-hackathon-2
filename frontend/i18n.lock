@@ -1,0 +1,17 @@
+version: 1
+checksums:
+  55dc377b5e931bfc64e4add83e35d9ea:
+    app.title: 9389992238b07dfc6a32af8559234860
+    app.subtitle: f4c473b654198641630da056bac2a6d2
+    section.embed.title: 4f052d26cd7bcead090235457fd44b14
+    section.embed.description: b5f22cc0e73c5cc4fa9a966730e4e3c0
+    section.embed.button: c2a899b3c61f6fb9665295c1f842353d
+    section.policy.title: f09224f311e0b1aad2fbb1dd4806e73e
+    section.policy.description: dc565e66d91acd4e85b2ea66eecf8d2b
+    section.policy.button: 3a4fb6fba23e0e85a377e4aeacc62af0
+    section.geo.title: 0d7ba3847ed05fcbe7e5cbfdcad63bee
+    section.geo.description: 5806cadb6eeca3609a4d16646564cc15
+    section.geo.button: b57bf3949ad9fc4a96d9d7584444f396
+    section.rag.title: 4fa31a391eb5a3a2bd0a42dcaba3cb99
+    section.rag.description: d3b78cc395da940257bd19c0f3469ac6
+    section.rag.button: 24150ae04c60dcd8688d93a8a3a2d238
